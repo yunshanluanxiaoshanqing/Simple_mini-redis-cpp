@@ -1,0 +1,19 @@
+# 版本 01-original 的换行符策略
+# 该目录原先缺少 .gitattributes，在 core.autocrlf=true 的机器上
+# clone 后 run_tests.sh 会变成 CRLF，导致 shell 无法执行。
+
+# 默认按文本处理，入库统一换行为 LF
+* text=auto eol=lf
+
+# shell 脚本必须 LF
+*.sh text eol=lf
+
+# PowerShell 脚本保持 CRLF（Windows 兼容）
+*.ps1 text eol=crlf
+
+# 二进制
+*.exe binary
+*.a binary
+*.o binary
+*.obj binary
+*.rdb binary

@@ -1,0 +1,34 @@
+# 仓库级换行符策略（在 Windows 上 core.autocrlf=true 时尤其重要）
+#
+# 说明：patterns 按目录就近生效，子目录中的 .gitattributes 优先级更高，
+# 因此本文件只用于兜底 01-original 及仓库根级文件，不会覆盖各版本的既有约定。
+
+# 默认按文本处理，入库统一归一化为 LF
+* text=auto
+
+# Shell 脚本必须以 LF 入库，否则在 Linux/macOS 上会报 bad interpreter
+*.sh text eol=lf
+*.bash text eol=lf
+
+# PowerShell / Visual Studio 文件保持 CRLF
+*.ps1 text eol=crlf
+*.psm1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.sln text eol=crlf
+*.vcxproj text eol=crlf
+
+# 明确标记二进制，避免被当成文本做换行转换
+*.exe binary
+*.dll binary
+*.a binary
+*.lib binary
+*.obj binary
+*.o binary
+*.out binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.rdb binary

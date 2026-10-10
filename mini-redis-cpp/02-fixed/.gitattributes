@@ -1,0 +1,8 @@
+# 默认按文本处理，入库统一换行为 LF
+* text=auto
+
+# shell 脚本必须 LF
+*.sh text eol=lf
+
+# 二进制
+*.exe binary

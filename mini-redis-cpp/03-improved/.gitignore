@@ -1,0 +1,28 @@
+# 构建产物
+build*/
+cmake-build-*/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+compile_commands.json
+
+# 编译产物
+*.o
+*.obj
+*.a
+*.exe
+*.out
+*.dll
+
+# 运行时数据
+dump.my_rdb
+
+# IDE / 编辑器
+.vscode/
+.idea/
+*.user
+*.swp
+
+# 系统文件
+.DS_Store
+Thumbs.db

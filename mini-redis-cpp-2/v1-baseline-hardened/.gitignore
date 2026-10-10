@@ -1,0 +1,13 @@
+# 构建产物
+build/
+build-*/
+*.o
+*.obj
+*.a
+*.exe
+
+# 运行时产生的持久化文件与日志
+*.rdb
+*.rdb.tmp
+*.log
+*.err
